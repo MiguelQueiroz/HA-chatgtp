@@ -53,10 +53,10 @@ def setup(hass, config):
         with open(context_file, "r") as file:
             context = file.read()
 
-        if context:
+        if data_call.data.get(CONF_MESSAGE_THREAD_ID) and len(context)>0:
             context+="\n"+message  + "\n"+message_post #Just append the new message input and the post part if exists
         else:
-            context+=message_context+ "\n"+message + "\n"+message_post; #This is the full template prompt sent to chat gtp to complete. Append this new context
+            context=message_context+ "\n"+message + "\n"+message_post; #This is the full template prompt sent to chat gtp to complete. Append this new context
 
         
         #Feed this context to the AI
@@ -78,7 +78,7 @@ def setup(hass, config):
         final_context=context+response_text;
 
         
-        if len(final_context) >= max_context_length:
+        if data_call.data.get(CONF_MESSAGE_THREAD_ID) and len(final_context) >= max_context_length:
             final_context = final_context[len(final_context)-max_context_length:]
             lines = final_context.splitlines()
             lines_to_keep = []
