@@ -39,8 +39,12 @@ max_tokens is the limit of the response, token is a measure you must check with 
 Define the entity_id where the service will use to call the tts service
 You can check the responses for each interaction on the event listener bus "chatgtp_service"
 
+###thread_id defined the new context file that is created under this custom componenent folder. Each context can have its meaning, so, depending on the service call you can reuse a thread id, thats where the id comes into action.
 
-### Another example of a template could be instead of conversational BOT, its just used to talk/advice about context variables of your home assistant, triggered by some automation for example:
+## Another example## 
+You can create a context message that would be called on your automations/scripts that instead of conversational BOT, its just used to talk/advice about context variables of your home assistant:
+
+
 
 <pre>"Room temp: 16ºc.
 Heater:off.
