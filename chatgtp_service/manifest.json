@@ -1,0 +1,7 @@
+{
+    "domain": "chatgtp_service",
+    "name": "HA chatGTP Service",
+    "documentation": "https://github.com/MiguelQueiroz/HA-chatgtp",
+    "iot_class": "cloud_polling",
+    "version": "0.1.0"
+}
