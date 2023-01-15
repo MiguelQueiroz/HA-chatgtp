@@ -31,7 +31,11 @@ data:
   thread_id: "2"
   message: "[Me]: do short text with a paragraph"
   message_post: "[AI]:"
+  max_tokens: 50
+  entity_id: media_player.desktop_mediaplayer
 </pre>
 
+max_tokens is the limit of the response, token is a measure you must check with the openAI, since it defines the price you pay per token and engine model dependent.
+Define the entity_id where the service will use to call the tts service
 You can check the responses for each interaction on the event listener bus "chatgtp_service"
 
