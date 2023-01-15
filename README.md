@@ -41,7 +41,7 @@ You can check the responses for each interaction on the event listener bus "chat
 
 ###thread_id defined the new context file that is created under this custom componenent folder. Each context can have its meaning, so, depending on the service call you can reuse a thread id, thats where the id comes into action.
 
-## Another example## 
+## Another example ## 
 You can create a context message that would be called on your automations/scripts that instead of conversational BOT, its just used to talk/advice about context variables of your home assistant:
 
 
