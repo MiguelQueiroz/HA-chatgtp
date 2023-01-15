@@ -39,3 +39,17 @@ max_tokens is the limit of the response, token is a measure you must check with 
 Define the entity_id where the service will use to call the tts service
 You can check the responses for each interaction on the event listener bus "chatgtp_service"
 
+
+### Another example of a template could be instead of conversational BOT, its just used to talk/advice about context variables of your home assistant, triggered by some automation for example:
+
+<pre>"Room temp: 16ºc.
+Heater:off.
+
+What do you recomend me to do? act like a nice AI assistant advisor and  reply with no longer sentences!"
+</pre>
+
+<pre>"It is recommended that you turn on the heater to increase the room temperature. Additionally, you may want to consider wearing warmer clothing or using a blanket to stay warm."</pre>
+
+This is one possible responses I received that. You can then forward this to your tts service to play in your media player
+
+
